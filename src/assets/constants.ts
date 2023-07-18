@@ -24,22 +24,35 @@ export const navbar_links = [
 		link_address: "/contact"
 	},
 ];
+
+// ? Icons
+import { IconType } from 'react-icons';
+import { VscGithubAlt } from "react-icons/vsc";
+import { SiLinkedin } from "react-icons/si";
+import { TbBrandTwitter } from "react-icons/tb";
+import { HiOutlineMail } from "react-icons/hi";
+
 export const social_links = [
 	{
 		social_media_name: "github",
 		social_media_link: "https://github.com/AnupShouryaDev",
+		social_media_icon: VscGithubAlt as IconType,
+
 	},
 	{
 		social_media_name: "linkedin",
-		social_media_link: "",
+		social_media_link: "https://www.linked.com",
+		social_media_icon: SiLinkedin as IconType,
 	},
 	{
 		social_media_name: "twitter",
-		social_media_link: "",
+		social_media_link: "https://ww.twitter.com",
+		social_media_icon: TbBrandTwitter as IconType,
 	},
 	{
 		social_media_name: "email",
 		social_media_link: "mailto:contact.yourwebdev@gmail.com",
+		social_media_icon: HiOutlineMail as IconType,
 	},
 ];
 export const about_section = {

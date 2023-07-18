@@ -1,0 +1,7 @@
+*{
+    font-family: 'Inconsolata';
+}
+#menu{
+    background-color: #0f172a80;
+    backdrop-filter: blur(2px);
+}

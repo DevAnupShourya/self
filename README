@@ -1,1 +1,8 @@
+Color Pallatte : 
+bg-primary : #0F172A
+bg-secondry : #1E293B
+text-primary : #FFFFFF
+text-link : #22D3EE
+text-accent : #BD34FE
+
 npx tailwindcss -i ./src/style/input.css -o ./src/style/tailwindcss.css --watch

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="265.33905px" height="264.5476px" viewBox="0 0 265.33905 264.5476" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L180 0L180 184L0 184L0 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" transform="translate(0, -29.060005)" />
+    </clipPath>
+  </defs>
+  <g id="logo-v2">
+    <g id="logo-sides" fill-opacity="1">
+      <path d="M250.339 0L250.339 0L250.339 249.548L0 249.548L0 0L250.339 0Z" id="logo-sides" fill="none" stroke="none" />
+      <g id="Group">
+        <path d="M213.958 32.4999L213.958 215.5" id="Line" fill="none" fill-rule="evenodd" stroke="#22D3EE" stroke-width="15" stroke-linecap="square" />
+        <path d="M34.4577 31.9999L34.4577 215" id="Line-Copy" fill="none" fill-rule="evenodd" stroke="#22D3EE" stroke-width="15" stroke-linecap="square" />
+        <path d="M0 157.048L160.215 249.548" id="Line-2" fill="none" fill-rule="evenodd" stroke="#22D3EE" stroke-width="15" stroke-linecap="square" />
+        <path d="M88 0.0476685L248.215 92.5476" id="Line-2-Copy" fill="none" fill-rule="evenodd" stroke="#22D3EE" stroke-width="15" stroke-linecap="square" />
+        <path d="M1.14551 92.5L161.36 0" id="Line-3" fill="none" fill-rule="evenodd" stroke="#22D3EE" stroke-width="15" stroke-linecap="square" />
+        <path d="M90.1243 249.5L250.339 157" id="Line-3-Copy" fill="none" fill-rule="evenodd" stroke="#22D3EE" stroke-width="15" stroke-linecap="square" />
+      </g>
+    </g>
+    <g id="A" clip-path="url(#clip_1)" transform="translate(35.661133 61.607735)">
+      <g transform="translate(60, 0)" id="A" fill="#22D3EE">
+        <path d="M44.4 87.12L14.52 87.12L16.44 76.44L42.12 76.44L44.4 87.12ZM30.12 54.9262L16.44 103.08L1.32 103.08L25.92 27.84L34.2 27.84L58.8 103.08L43.44 103.08L30.12 54.9262Z" />
+      </g>
+    </g>
+  </g>
+</svg>
