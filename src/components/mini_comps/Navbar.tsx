@@ -14,7 +14,7 @@ export default function Navbar() {
       <motion.nav className="z-[2] fixed top-0 left-0 w-screen h-28 py-4">
         <div
           id="navbar"
-          className="w-5/6 h-full rounded-md mx-auto bg-slate-800 px-10 py-2 flex justify-between"
+          className="w-5/6 h-full rounded-md mx-auto bg-slate-800 px-10 py-2 flex justify-between shadow-2xl"
         >
           <div id="logo" className="w-1/12 h-full">
             <Link to={"/"}>

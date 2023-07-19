@@ -28,7 +28,7 @@ export const navbar_links = [
 // ? Icons
 import { IconType } from 'react-icons';
 import { VscGithubAlt } from "react-icons/vsc";
-import { SiLinkedin } from "react-icons/si";
+import { LiaLinkedin } from "react-icons/lia";
 import { TbBrandTwitter } from "react-icons/tb";
 import { HiOutlineMail } from "react-icons/hi";
 
@@ -42,7 +42,7 @@ export const social_links = [
 	{
 		social_media_name: "linkedin",
 		social_media_link: "https://www.linked.com",
-		social_media_icon: SiLinkedin as IconType,
+		social_media_icon: LiaLinkedin as IconType,
 	},
 	{
 		social_media_name: "twitter",

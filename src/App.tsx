@@ -19,7 +19,7 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 export default function App() {
   return (
-    <div id="codeRoot" className="w-screen h-screen bg-slate-900 text-white overflow-hidden relative py-10 px-8">
+    <div id="codeRoot" className="w-screen h-screen bg-gradient-radial from-slate-800 to-slate-900 text-white overflow-hidden py-10 px-8">
       <BrowserRouter>
       <Cursor/>
       <Navbar/>

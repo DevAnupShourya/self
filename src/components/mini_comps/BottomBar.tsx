@@ -12,7 +12,7 @@ export default function BottomBar() {
         id="footer"
         className="w-5/6 h-full mx-auto py-2 flex justify-between"
       >
-        <motion.div id="socialBar" className="w-2/6 rounded-md bg-slate-800">
+        <motion.div id="socialBar" className="w-2/6 rounded-md bg-slate-800 shadow-2xl">
           <ul className="w-full h-full flex flex-row justify-around items-center">
             {social_links.map((link) => {
               const IconComponent = link.social_media_icon;
@@ -29,10 +29,7 @@ export default function BottomBar() {
             })}
           </ul>
         </motion.div>
-        <motion.div
-          id="statusBar"
-          className="w-1/6 rounded-md bg-slate-800 grid place-items-center text-xs"
-        >
+        <motion.div id="statusBar"className="w-1/6 rounded-md bg-slate-800 grid place-items-center text-xs shadow-2xl">
           <p>Seeking Job Oportuanities</p>
         </motion.div>
       </footer>

@@ -1,7 +1,47 @@
-*{
-    font-family: 'Inconsolata';
+* {
+  font-family: "Inconsolata";
 }
-#menu{
-    background-color: #0f172a80;
-    backdrop-filter: blur(2px);
+#navbar,
+#menu,
+#socialBar,
+#statusBar {
+  background-color: #0f172a80;
+  backdrop-filter: blur(2px);
+}
+#cursor {
+  /* background: radial-gradient(200px at 100px 170px, rgb(29, 79, 216), transparent 80%); */
+
+  background: rgba(255, 255, 255, 0.2);
+  
+  background-image: -webkit-repeating-radial-gradient(
+    center center,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: -moz-repeating-radial-gradient(
+    center center,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: -ms-repeating-radial-gradient(
+    center center,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: repeating-radial-gradient(
+    center center,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  -webkit-background-size: 3px 3px;
+  -moz-background-size: 3px 3px;
+  background-size: 3px 3px;
 }

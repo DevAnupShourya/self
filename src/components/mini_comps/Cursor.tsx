@@ -2,7 +2,7 @@
 
 // ? packages
 import { useEffect } from "react";
-import { motion, useMotionValue, useSpring} from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function Cursor() {
   const mouseX = useMotionValue(0);
@@ -27,7 +27,8 @@ export default function Cursor() {
 
   return (
     <motion.div
-      className="w-[50px] h-[50px] z-10 bg-gray-900  border-cyan-500 border-2 rounded-full grid place-items-center"
+      id="cursor"
+      className="w-[50px] h-[50px] pointer-events-none fixed inset-0 z-30  rounded-full grid place-items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1, duration: 0.5 }}
@@ -35,11 +36,6 @@ export default function Cursor() {
         translateX: cursorXSpring,
         translateY: cursorYSpring,
       }}
-    >
-      <motion.div
-        transition={{ stiffness: 100 }}
-        className="w-[25px] h-[25px] -z-10 bg-gray-950 rounded-full"
-      ></motion.div>
-    </motion.div>
+    ></motion.div>
   );
 }
