@@ -77,13 +77,13 @@ export default function About() {
               <h1 className="text-4xl font-bold capitalize">
                 {about_section.whoIam.myName}
               </h1>
-              <p className="text-sm font-semibold capitalize mt-1 mb-5">
+              <p className="text-gray-500 text-sm font-semibold capitalize mt-1 mb-5">
                 {about_section.whoIam.myStatus}
               </p>
-              <p className="text-xl my-2 font-light capitalize">
+              <p className="text-gray-500 text-xl my-2 font-light capitalize">
                 {about_section.whoIam.mySelfPara1}
               </p>
-              <p className="text-xl my-2 font-light capitalize">
+              <p className="text-xl text-gray-500 my-2 font-light capitalize">
                 {about_section.whoIam.mySelfPara2}
               </p>
             </div>

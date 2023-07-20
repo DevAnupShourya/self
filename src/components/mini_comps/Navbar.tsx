@@ -109,7 +109,8 @@ export default function Navbar() {
           </div>
           <div id="menubar" className="w-1/12 h-full grid place-items-center">
             <motion.i 
-            whileTap={{scaleY : 0.8}}
+            whileHover={{scale : 1.2}}
+            whileTap={{scaleY : 0.5}}
             className="cursor-pointer text-3xl font-bold text-cyan-500" onClick={() => {setMenuOpen(!menuOpen)}}>
               {menuOpen ? <RiCloseLine/> : <RiMenu5Fill/>}
             </motion.i>
@@ -122,7 +123,7 @@ export default function Navbar() {
         <ul id="links" className="w-1/3 text-center">
           {navbar_links.map((link) => {
             return (
-              <li key={`${link.link_address}`} className="uppercase text-8xl tracking-widest font-thin" onClick={() => {setMenuOpen(!menuOpen)}}>
+              <li key={`${link.link_address}`} className="uppercase text-8xl tracking-widest font-bold cta" onClick={() => {setMenuOpen(!menuOpen)}}>
                 <Link to={link.link_address}>{`${link.link_name}`}</Link>
               </li>
             );

@@ -19,6 +19,7 @@ export default function BottomBar() {
               return (
                 <motion.li
                   key={`${link.social_media_name}`}
+                  whileHover={{scale : 1.2}}
                   className="text-cyan-500 font-light text-xl"
                 >
                   <Link to={link.social_media_link} target="_blank">

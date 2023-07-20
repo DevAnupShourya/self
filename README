@@ -5,4 +5,9 @@ text-primary : #FFFFFF
 text-link : #22D3EE
 text-accent : #BD34FE
 
+Anup Shourya
+
+
+wha i know elements 
+
 npx tailwindcss -i ./src/style/input.css -o ./src/style/tailwindcss.css --watch

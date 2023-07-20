@@ -8,9 +8,9 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className=" w-full h-full overflow-hidden grid place-items-center"
+      className="w-full h-full overflow-hidden grid place-items-center"
     >
-      <div id="projects_cards" className="w-4/5 h-5/6 overflow-y-scroll">
+      <div id="projects_cards" className="py-10 w-4/5 h-5/6 overflow-y-scroll">
         {projects_section.map((project) => {
           return (
             <motion.div
@@ -46,27 +46,29 @@ export default function Projects() {
               ></motion.div>
               <div
                 id={`project_${project.projectNo}_details`}
-                className="w-2/4 h-full absolute top-0 left-0 z-[3] p-4"
+                className="w-2/4 h-full absolute top-0 left-0 z-[3] py-2 px-5"
               >
                 <h1 className="text-2xl font-bold tracking-widest capitalize">
                   {project.projectName}
                 </h1>
-                <p className="text-sm py-1">{project.projectSummary}</p>
+                <p className="text-sm text-gray-500">{project.projectSummary}</p>
                 <div id={`project_${project.projectNo}_links`} className=" w-1/3 flex items-center justify-between">
-                  <a
+                  <motion.a
+                  whileHover={{scale: 1.2}}
                     className="text-xl p-2 text-cyan-500"
                     href={project.projectGithubLink}
                     target="_blank"
                   >
                     <VscGithubAlt />
-                  </a>
-                  <a
+                  </motion.a>
+                  <motion.a
+                  whileHover={{scale: 1.2}}
                     className="text-xl p-2 text-cyan-500"
                     href={project.projectLivedemoLink}
                     target="_blank"
                   >
                     <VscArrowSwap/>
-                  </a>
+                  </motion.a>
                 </div>
               </div>
             </motion.div>
