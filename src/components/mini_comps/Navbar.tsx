@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.nav className="z-[2] fixed top-0 left-0 w-screen h-28 py-4">
+      <motion.nav className="z-20 fixed top-0 left-0 w-screen h-28 py-4">
         <div
           id="navbar"
           className="w-5/6 h-full rounded-md mx-auto bg-slate-800 px-10 py-2 flex justify-between shadow-2xl"
@@ -118,7 +118,7 @@ export default function Navbar() {
       </motion.nav>
       <motion.div
         id="menu"
-        className={`${menuOpen ? 'grid' : 'hidden'}  z-[1] fixed top-0 left-0 w-screen h-screen py-28  place-items-center`}>
+        className={`${menuOpen ? 'grid' : 'hidden'}  z-10 fixed top-0 left-0 w-screen h-screen py-28  place-items-center`}>
         <ul id="links" className="w-1/3 text-center">
           {navbar_links.map((link) => {
             return (
