@@ -45,34 +45,52 @@
   -moz-background-size: 3px 3px;
   background-size: 3px 3px;
 }
-#card_2_details{
+#projects , #card_2_details{
   scroll-behavior: smooth;
   scrollbar-width: thin; /* For Firefox */
   scrollbar-color: transparent transparent; /* For Chrome, Edge, and Safari */
 
 }
 #card_2_details::-webkit-scrollbar {
-  width: 6px;
+  width: 0px;
+}
+#projects ::-webkit-scrollbar {
+  width: 0px;
 }
 
 #card_2_details::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+#projects ::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
 #card_2_details::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
-
-/* For Firefox */
-#card_2_details::-moz-scrollbar {
-  width: 6px;
+#projects::-webkit-scrollbar-thumb {
+  background-color: transparent;
 }
 
-#card_2_details::-moz-scrollbar-track {
+/* For Firefox */
+  #card_2_details::-moz-scrollbar {
+  width: 0px;
+}
+#projects ::-moz-scrollbar {
+  width: 0px;
+}
+
+ #card_2_details::-moz-scrollbar-track {
+  background-color: transparent;
+}
+#projects ::-moz-scrollbar-track {
   background-color: transparent;
 }
 
 #card_2_details::-moz-scrollbar-thumb {
+  background-color: transparent;
+}
+#projects::-moz-scrollbar-thumb {
   background-color: transparent;
 }
 #upperdiv_1 , #bottomdiv_6{

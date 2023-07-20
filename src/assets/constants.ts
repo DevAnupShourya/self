@@ -152,32 +152,36 @@ export const about_section = {
 };
 export const projects_section = [
 	{
+		projectNo: 1,
 		projectName: "google adds",
-		projectSummary: "lorem labma cahuda hai",
+		projectSummary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum autem deleniti aliquid, aspernatur accusantium aliquam.",
 		projectGithubLink: "https//www.github.com/yele",
 		projectLivedemoLink: "https//www.yele.com/",
-		projectImgLink: "./src/assests/yele.jpg",
+		projectImgLink: "./projects/p1.png",
 	},
 	{
+		projectNo: 2,
 		projectName: "google adds",
-		projectSummary: "lorem labma cahuda hai",
+		projectSummary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum autem deleniti aliquid, aspernatur accusantium aliquam.",
 		projectGithubLink: "https//www.github.com/yele",
 		projectLivedemoLink: "https//www.yele.com/",
-		projectImgLink: "./src/assests/yele.jpg",
+		projectImgLink: "./projects/p2.jpg",
 	},
 	{
+		projectNo: 3,
 		projectName: "google adds",
-		projectSummary: "lorem labma cahuda hai",
+		projectSummary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum autem deleniti aliquid, aspernatur accusantium aliquam.",
 		projectGithubLink: "https//www.github.com/yele",
 		projectLivedemoLink: "https//www.yele.com/",
-		projectImgLink: "./src/assests/yele.jpg",
+		projectImgLink: "./projects/p5.jpg",
 	},
 	{
+		projectNo: 4,
 		projectName: "google adds",
-		projectSummary: "lorem labma cahuda hai",
+		projectSummary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum autem deleniti aliquid, aspernatur accusantium aliquam.",
 		projectGithubLink: "https//www.github.com/yele",
 		projectLivedemoLink: "https//www.yele.com/",
-		projectImgLink: "./src/assests/yele.jpg",
+		projectImgLink: "./projects/p4.png",
 	},
 ];
 export const footer_section = {
