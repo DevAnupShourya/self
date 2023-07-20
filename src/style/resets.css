@@ -12,7 +12,7 @@
   /* background: radial-gradient(200px at 100px 170px, rgb(29, 79, 216), transparent 80%); */
 
   background: rgba(255, 255, 255, 0.2);
-  
+  background-blend-mode: color-burn;
   background-image: -webkit-repeating-radial-gradient(
     center center,
     rgba(255, 255, 255, 0.2),

@@ -4,6 +4,11 @@
 
 export default function Blogs() {
   return (
-    <div>Blogs</div>
-  )
+    <section
+      id="blogs"
+      className="w-full h-full overflow-hidden grid place-items-center"
+    >
+      Blogs
+    </section>
+  );
 }
