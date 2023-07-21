@@ -15,10 +15,11 @@ export const navbar_links = [
 		link_name: "projects",
 		link_address: "/projects"
 	},
-	{
-		link_name: "blogs",
-		link_address: "/blogs"
-	},
+	// ? In Future
+	// {
+	// 	link_name: "blogs",
+	// 	link_address: "/blogs"
+	// },
 	{
 		link_name: "contact",
 		link_address: "/contact"
@@ -60,7 +61,7 @@ import { RiReactjsLine } from 'react-icons/ri';
 import { ImHtmlFive } from 'react-icons/im';
 import { BiLogoCss3 } from 'react-icons/bi';
 import { RiJavascriptFill } from 'react-icons/ri';
-import { SiTailwindcss , SiMongodb , SiExpress} from 'react-icons/si';
+import { SiTailwindcss , SiMongodb , SiExpress , SiSass, SiFigma} from 'react-icons/si';
 import { IoLogoNodejs } from 'react-icons/io';
 import { BiLogoTypescript } from 'react-icons/bi';
 
@@ -113,40 +114,59 @@ export const about_section = {
 	,
 	whatIknow: [
 		{
-			techName: "BiLogoTypescript",
+			no : 1,
+			techName: "TypeScript",
 			techIcon:  BiLogoTypescript as IconType
 		},
 		{
-			techName: "RiReactjsLine",
+			no : 2,
+			techName: "reactjs",
 			techIcon:  RiReactjsLine as IconType
 		},
 		{
-			techName: "ImHtmlFive",
+			no : 3,
+			techName: "html",
 			techIcon:  ImHtmlFive as IconType
 		},
 		{
-			techName: "BiLogoCss3",
+			no : 4,
+			techName: "css",
 			techIcon:  BiLogoCss3 as IconType
 		},
 		{
-			techName: "RiJavascriptFill",
+			no : 5,
+			techName: "javascript",
 			techIcon:  RiJavascriptFill as IconType
 		},
 		{
-			techName: "SiTailwindcss",
+			no : 6,
+			techName: "tailwindcss",
 			techIcon:  SiTailwindcss as IconType
 		},
 		{
-			techName: "IoLogoNodejs",
+			no : 7,
+			techName: "nodejs",
 			techIcon:  IoLogoNodejs as IconType
 		},
 		{
-			techName: "SiExpress",
+			no : 8,
+			techName: "express",
 			techIcon:  SiExpress as IconType
 		},
 		{
-			techName: "SiMongodb",
+			no : 9,
+			techName: "mongodb",
 			techIcon:  SiMongodb as IconType
+		},
+		{
+			no : 10,
+			techName: "Figma",
+			techIcon:  SiFigma as IconType
+		},
+		{
+			no : 11,
+			techName: "Sass",
+			techIcon:  SiSass as IconType
 		},
 	]
 };

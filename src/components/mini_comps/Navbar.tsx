@@ -4,17 +4,21 @@ import { navbar_links } from "../../assets/constants";
 import { RiMenu5Fill, RiCloseLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import {useState} from 'react'
+import { useState } from "react";
 
-export default function Navbar() {
+interface HomeProps {
+  setOnLink: (value: boolean) => void;
+}
+
+export default function Navbar(props: HomeProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
-      <motion.nav className="z-20 fixed top-0 left-0 w-screen h-28 py-4">
+      <motion.nav className="z-20 fixed top-0 left-0 w-screen h-28 py-4 ">
         <div
           id="navbar"
-          className="w-5/6 h-full rounded-md mx-auto bg-slate-800 px-10 py-2 flex justify-between shadow-2xl"
+          className="w-5/6 h-full rounded-md mx-auto px-10 py-2 flex justify-between shadow-2xl bg-slate-900"
         >
           <div id="logo" className="w-1/12 h-full">
             <Link to={"/"}>
@@ -108,24 +112,47 @@ export default function Navbar() {
             </Link>
           </div>
           <div id="menubar" className="w-1/12 h-full grid place-items-center">
-            <motion.i 
-            whileHover={{scale : 1.2}}
-            whileTap={{scaleY : 0.5}}
-            className="cursor-pointer text-3xl font-bold text-cyan-500" onClick={() => {setMenuOpen(!menuOpen)}}>
-              {menuOpen ? <RiCloseLine/> : <RiMenu5Fill/>}
+            <motion.i
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scaleY: 0.5 }}
+              className="cursor-pointer text-3xl font-bold text-white"
+              onClick={() => {
+                setMenuOpen(!menuOpen);
+              }}
+            >
+              {menuOpen ? <RiCloseLine /> : <RiMenu5Fill />}
             </motion.i>
           </div>
         </div>
       </motion.nav>
       <motion.div
         id="menu"
-        className={`${menuOpen ? 'grid' : 'hidden'}  z-10 fixed top-0 left-0 w-screen h-screen py-28  place-items-center`}>
-        <ul id="links" className="w-1/3 text-center">
+        className={`${
+          menuOpen ? "grid" : "hidden"
+        }  z-10 fixed top-0 left-0 w-screen h-screen py-28  place-items-center backdrop-blur-md`}
+      >
+        <ul id="links" className="w-3/6 text-center">
           {navbar_links.map((link) => {
             return (
-              <li key={`${link.link_address}`} className="uppercase text-8xl tracking-widest font-bold cta" onClick={() => {setMenuOpen(!menuOpen)}}>
+              // <li key={`${link.link_address}`} className="uppercase text-8xl tracking-widest font-bold links" onClick={() => {setMenuOpen(!menuOpen)}}>
+              <motion.li
+                whileHover={{ letterSpacing: "0px", scale : 2 }}
+                transition={{type : 'spring'}}
+                animate={{letterSpacing : '-10px'}}
+                key={`${link.link_address}`}
+                className="uppercase text-8xl text-white font-bold hover:text-emerald-500 transition-colors"
+                onClick={() => {
+                  setMenuOpen(!menuOpen);
+                }}
+                onMouseEnter={() => {
+                  props.setOnLink(true);
+                }}
+                onMouseLeave={() => {
+                  props.setOnLink(false);
+                }}
+              >
                 <Link to={link.link_address}>{`${link.link_name}`}</Link>
-              </li>
+              </motion.li>
             );
           })}
         </ul>

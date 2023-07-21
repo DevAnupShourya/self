@@ -4,43 +4,48 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export default function Home() {
+interface HomeProps {
+  setOnLink: (value: boolean) => void;
+}
+
+export default function Home(props: HomeProps) {
   return (
     <section
       id="home"
-      className="w-full z-[2] h-full overflow-hidden grid place-items-center"
+      className="w-full z-[2] h-full overflow-hidden grid place-items-center text-center"
     >
-      <main id="hero" className="text-center">
+      <main id="hero" className="">
         <motion.h1
           id="hero_title"
-          className="h1 uppercase font-bold text-8xl tracking-widest"
-          animate={{
-            textShadow: [
-              "0px 0px rgb(6, 182, 212), 0px 0px  rgb(139, 92, 246)",
-              "6px 6px rgb(6, 182, 212), -6px -6px  rgb(139, 92, 246)",
-              "0px 0px rgb(6, 182, 212), 0px 0px  rgb(139, 92, 246)",
-              "-6px -6px rgb(6, 182, 212) ,6px 6px  rgb(139, 92, 246)",
-              "0px 0px rgb(6, 182, 212), 0px 0px  rgb(139, 92, 246)",
-            ],
-          }}
-          transition={{ duration: 5, ease: "easeInOut", repeat: Infinity }}
+          className="stroke-effect uppercase font-bold text-8xl tracking-widest text-white "
         >
           hello i'm anup shourya
         </motion.h1>
         <p
           id="hero_tagline"
-          className="text-gray-500 capitalize font-extralight tracking-widest text-4xl my-5"
+          className="text-gray-500 capitalize font-medium tracking-widest text-4xl my-5"
         >
           unleashing prosibilities through <br /> passionate code craftsmanship
         </p>
-        <Link
-          to={"/projects"}
-          id="hero_cta"
-          // className="stroke-shadow inline-block uppercase font-bold text-3xl tracking-widest bg-cyan-400 text-purple-800 py-4 px-14 rounded-full"
-          className="cta uppercase font-bold text-4xl tracking-widest py-4 px-14 rounded-full violet-500"
+        <motion.h1
+          whileHover={{ letterSpacing: "0px", scale: 1.2 }}
+          transition={{ type: "spring" }}
+          animate={{ letterSpacing: "-1px" }}
         >
-          projects
-        </Link>
+          <Link
+            onMouseEnter={() => {
+              props.setOnLink(true);
+            }}
+            onMouseLeave={() => {
+              props.setOnLink(false);
+            }}
+            to={"/projects"}
+            id="hero_cta"
+            className="uppercase font-bold text-2xl  text-rose-500"
+          >
+            projects
+          </Link>
+        </motion.h1>
       </main>
     </section>
   );

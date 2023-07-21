@@ -67,11 +67,11 @@ export default function About() {
         </div>
         <div id="card_details" className="h-full w-3/4 relative">
           <motion.div
+            id="card_1_details"
             animate={cardOpen === "one" ? "open" : "closed"}
             variants={fadeInOut}
             transition={{ duration: 0.8, stiffness: 100 }}
-            id="card_1_details"
-            className={`w-full h-full absolute top-0 left-0 overflow-hidden grid place-items-center px-5`}
+            className={`w-full h-full z-[2] absolute top-0 left-0 overflow-hidden grid place-items-center px-5`}
           >
             <div id="card_1_details_card">
               <h1 className="text-4xl font-bold capitalize">
@@ -89,19 +89,19 @@ export default function About() {
             </div>
           </motion.div>
           <motion.div
+            id="card_2_details"
             animate={cardOpen === "two" ? "open" : "closed"}
             variants={fadeInOut}
             transition={{ duration: 0.8, stiffness: 100 }}
-            id="card_2_details"
-            className={`w-full h-full absolute top-0 left-0 overflow-y-scroll grid place-items-center px-5`}
+            className={`w-full h-full z-1 absolute top-0 left-0 overflow-y-scroll grid place-items-center px-5`}
           >
             <div id="card_2_details_card" className="w-10/12 h-full">
               {about_section.howIWork.map((card) => {
                 const IconComponent = card.icon;
                 return (
                   <motion.div
-                    transition={{ delay:  0.08 * card.stepNumber }}
-                    whileInView={{opacity : [0 , 1]}}
+                    transition={{ delay: 0.08 * card.stepNumber }}
+                    whileInView={{ opacity: [0, 1] }}
                     className="flex"
                     key={card.stepNumber}
                   >
@@ -111,7 +111,7 @@ export default function About() {
                     >
                       <div
                         id={`upperdiv_${card.stepNumber}`}
-                        className="bg-gray-300 w-px h-10 opacity-100 sm:h-full"
+                        className="bg-slate-400 w-px h-10 opacity-100 sm:h-full"
                       />
                       <div>
                         <div className="flex items-center justify-center w-8 h-8 text-xs font-medium border rounded-full">
@@ -120,7 +120,7 @@ export default function About() {
                       </div>
                       <div
                         id={`bottomdiv_${card.stepNumber}`}
-                        className="w-px h-full bg-gray-300"
+                        className="w-px h-full bg-slate-400"
                       />
                     </div>
                     <div
@@ -128,13 +128,13 @@ export default function About() {
                       className="flex flex-col sm:items-center sm:flex-row py-5"
                     >
                       <div className="sm:mr-5">
-                        <div className="flex items-center justify-center w-16 h-16 my-3 rounded-full bg-slate-800 sm:w-24 sm:h-24 text-cyan-500 text-2xl font-bold">
+                        <div className="flex items-center justify-center w-16 h-16 my-3 rounded-full bg-indigo-950  sm:w-24 sm:h-24 text-indigo-500 border border-indigo-500 text-2xl font-bold">
                           <IconComponent />
                         </div>
                       </div>
                       <div>
-                        <p className="text-xl font-semibold ">{card.name}</p>
-                        <p className="text-sm text-gray-500">{card.details}</p>
+                        <h1 className="text-xl font-semibold text-indigo-500">{card.name}</h1>
+                        <p className="text-sm">{card.details}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -143,19 +143,32 @@ export default function About() {
             </div>
           </motion.div>
           <motion.div
+            id="card_3_details"
             animate={cardOpen === "three" ? "open" : "closed"}
             variants={fadeInOut}
             transition={{ duration: 0.8, stiffness: 100 }}
-            id="card_3_details"
-            className={`w-full h-full absolute top-0 left-0 overflow-hidden grid place-items-center px-5`}
+            className={`w-full h-full z-1 absolute top-0 left-0 overflow-hidden grid place-items-center px-5`}
           >
-            <div id="card_3_details_card">
-              {about_section.whatIknow.map((item) => {
-                const IconComponent = item.techIcon;
-                return (
-                    <h1 className="text-5xl"> {item.techName} : <IconComponent className="inline-block" /></h1>
-                );
-              })}
+            <div id="card_3_details_card" className="w-full h-full">
+              <ul className="w-full h-full grid grid-rows-4 grid-cols-3 place-items-stretch">
+                {about_section.whatIknow.map((item) => {
+                  const IconComponent = item.techIcon;
+                  return (
+                    <motion.li
+                      animate={{ opacity: [0, 0.5, 1] }}
+                      transition={{ delay: item.no * 0.1, duration: 0.5 }}
+                      key={item.techName}
+                      className="text-white text-5xl flex flex-col justify-center items-center"
+                      title={item.techName}
+                    > 
+                      <IconComponent className="text-teal-500" />
+                      <p className="text-sm uppercase font-light tracking-widest text-teal-200">
+                        {item.techName}
+                      </p>
+                    </motion.li>
+                  );
+                })}
+              </ul>
             </div>
           </motion.div>
         </div>
