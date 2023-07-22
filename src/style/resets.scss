@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
 * {
-	font-family: "Inconsolata";
+	font-family: 'Inconsolata', monospace;
 }
-svg{
+
+svg {
 	display: inline-block;
 }
+
 .stroke-effect {
 	-webkit-text-stroke-width: 2px;
 	-moz-text-stroke-width: 2px;
@@ -12,7 +16,7 @@ svg{
 	color: transparent;
 }
 
-
+// ? for hiding scrollbar
 #projects,
 #card_2_details {
 	scroll-behavior: smooth;
@@ -68,7 +72,8 @@ svg{
 	background-color: transparent;
 }
 
+// ? For Hiding Lines in how i work section of /about page
 #upperdiv_1,
-#bottomdiv_6 {
+#bottomdiv_8 {
 	opacity: 0;
 }

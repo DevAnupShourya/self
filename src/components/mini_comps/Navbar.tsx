@@ -5,7 +5,7 @@ import { RiMenu5Fill, RiCloseLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+// ? Hovering on any link state type
 interface HomeProps {
   setOnLink: (value: boolean) => void;
 }
@@ -115,7 +115,7 @@ export default function Navbar(props: HomeProps) {
             <motion.i
               whileHover={{ scale: 1.2 }}
               whileTap={{ scaleY: 0.5 }}
-              className="cursor-pointer lg:text-3xl md:text-2lg text-lg font-bold text-white"
+              className="cursor-pointer lg:text-3xl md:text-lg text-lg font-bold text-white"
               onClick={() => {
                 setMenuOpen(!menuOpen);
               }}
@@ -129,7 +129,7 @@ export default function Navbar(props: HomeProps) {
         id="menu"
         className={`${
           menuOpen ? "grid" : "hidden"
-        }  z-10 fixed top-0 left-0 w-screen h-screen py-28  place-items-center backdrop-blur-md`}
+        }  z-10 fixed top-0 left-0 w-screen h-screen py-28 place-items-center backdrop-blur-md`}
       >
         <ul id="links" className="w-3/6 text-center">
           {navbar_links.map((link) => {

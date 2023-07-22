@@ -31,7 +31,7 @@ export default function Projects() {
                   className="translate-x-80 -translate-y-10 max-md:translate-x-0 max-md:translate-y-0"
                   src={project.projectImgLink}
                   alt={`${project.projectImgLink}`}
-                />  
+                />
               </div>
               <motion.div
                 id={`project_${project.projectNo}_gredient_div`}

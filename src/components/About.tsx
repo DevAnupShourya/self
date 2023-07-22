@@ -17,8 +17,14 @@ export default function About() {
       id="about"
       className="w-full h-full overflow-hidden grid place-items-center"
     >
-      <div id="about_cards" className="w-3/4 h-2/3 max-md:w-10/12 max-md:h-5/6 flex flex-row max-md:flex-col">
-        <div id="card_titles" className="w-1/4 max-md:h-1/6 max-md:w-full border-l-4 max-md:border-b-4  max-md:border-l-0 border-slate-800 flex flex-col max-md:flex-row justify-between">
+      <div
+        id="about_cards"
+        className="w-3/4 h-2/3 max-md:w-10/12 max-md:h-5/6 flex flex-row max-md:flex-col"
+      >
+        <div
+          id="card_titles"
+          className="w-1/4 max-md:h-1/6 max-md:w-full border-l-4 max-md:border-b-4  max-md:border-l-0 border-slate-800 flex flex-col max-md:flex-row justify-between"
+        >
           <motion.button
             whileTap={{}}
             onClick={() => {
@@ -62,8 +68,12 @@ export default function About() {
             what i know
           </motion.button>
         </div>
-        <div id="card_details" className="h-full w-3/4 max-md:w-full max-md:h-5/6 relative">
-          <motion.div id="card_1_details"
+        <div
+          id="card_details"
+          className="h-full w-3/4 max-md:w-full max-md:h-5/6 relative"
+        >
+          <motion.div
+            id="card_1_details"
             animate={cardOpen === "one" ? "open" : "closed"}
             variants={fadeInOut}
             transition={{ duration: 0.8, stiffness: 100 }}
@@ -84,7 +94,8 @@ export default function About() {
               </p>
             </div>
           </motion.div>
-          <motion.div id="card_2_details"
+          <motion.div
+            id="card_2_details"
             animate={cardOpen === "two" ? "open" : "closed"}
             variants={fadeInOut}
             transition={{ duration: 0.8, stiffness: 100 }}
@@ -139,7 +150,8 @@ export default function About() {
               })}
             </div>
           </motion.div>
-          <motion.div id="card_3_details"
+          <motion.div
+            id="card_3_details"
             animate={cardOpen === "three" ? "open" : "closed"}
             variants={fadeInOut}
             transition={{ duration: 0.8, stiffness: 100 }}

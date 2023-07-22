@@ -1,10 +1,8 @@
 // ? Local Files
-import { social_links } from "../../assets/constants";
-
+import { social_links , footer_section} from "../../assets/constants";
 // ? packages
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
 
 export default function BottomBar() {
   return (
@@ -26,10 +24,7 @@ export default function BottomBar() {
                   whileHover={{ scale: 1.2 }}
                   className="text-cyan-500 font-light lg:text-xl md:text-lg text-lg"
                 >
-                  <Link
-                    to={link.social_media_link}
-                    target="_blank"
-                  >
+                  <Link to={link.social_media_link} target="_blank">
                     <IconComponent />
                   </Link>
                 </motion.li>
@@ -39,9 +34,9 @@ export default function BottomBar() {
         </motion.div>
         <motion.div
           id="statusBar"
-          className="lg:w-1/6 md:hidden p-2 rounded-md bg-slate-900 lg:grid  hidden place-items-center text-xs shadow-2xl"
+          className="lg:w-1/6 md:hidden p-2 rounded-md bg-slate-900 lg:grid  hidden place-items-center shadow-2xl"
         >
-          <p>Seeking Job Oportuanities</p>
+          <p className="text-xs">{footer_section.bottomBarMsg}</p>
         </motion.div>
       </footer>
     </motion.div>

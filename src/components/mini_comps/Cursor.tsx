@@ -1,16 +1,17 @@
-// ? Local Files
-
 // ? packages
 import { useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
+// ? Hovering on any link state type
 interface onLinkProps {
   onLink: boolean;
 }
 
 export default function Cursor(props: onLinkProps) {
+  // ? small cursor cors
   const mouse1X = useMotionValue(0);
   const mouse2X = useMotionValue(0);
+  // ? big cursor cors
   const mouse1Y = useMotionValue(0);
   const mouse2Y = useMotionValue(0);
 
@@ -21,17 +22,16 @@ export default function Cursor(props: onLinkProps) {
       mouse2X.set(event.clientX - 25);
       mouse2Y.set(event.clientY - 25);
     };
-
     document.addEventListener("mousemove", handleMouseMove);
-
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, [mouse1X, mouse1Y, mouse2X, mouse2Y]);
-
+  // ? small cursor effects
   const springConfig1 = { damping: 30, stiffness: 500 };
   const cursorXSpring1 = useSpring(mouse1X, springConfig1);
   const cursorYSpring1 = useSpring(mouse1Y, springConfig1);
+  // ? big cursor effects
   const springConfig2 = { damping: 40, stiffness: 300 };
   const cursorXSpring2 = useSpring(mouse2X, springConfig2);
   const cursorYSpring2 = useSpring(mouse2Y, springConfig2);

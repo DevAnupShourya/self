@@ -24,14 +24,17 @@ export default function Contact(props: HomeProps) {
           href="mailto:"
           target="_blank"
           className="text-2xl text-rose-400 uppercase font-bold m-5"
-          whileHover={{ filter: "blur(1px)" , scale : 1.2}}
+          whileHover={{ filter: "blur(1px)", scale: 1.2 }}
           transition={{ duration: 0.5, type: "spring" }}
           onMouseEnter={() => {
             props.setOnLink(true);
           }}
           onMouseLeave={() => {
             props.setOnLink(false);
-          }}>Say Hello</motion.a>
+          }}
+        >
+          Say Hello
+        </motion.a>
       </div>
 
       <p className="text-sm tracking-widest font-light capitalize text-center">
