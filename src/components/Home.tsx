@@ -17,13 +17,13 @@ export default function Home(props: HomeProps) {
       <main id="hero" className="">
         <motion.h1
           id="hero_title"
-          className="stroke-effect uppercase font-bold text-8xl tracking-widest text-white "
+          className="stroke-effect uppercase font-bold lg:text-8xl md:text-6xl tracking-widest text-5xl text-white "
         >
           hello i'm anup shourya
         </motion.h1>
         <p
           id="hero_tagline"
-          className="text-gray-500 capitalize font-medium tracking-widest text-4xl my-5"
+          className="text-gray-500 capitalize font-medium tracking-widest lg:text-4xl md:text-3xl  text-xl my-5"
         >
           unleashing prosibilities through <br /> passionate code craftsmanship
         </p>
@@ -41,7 +41,7 @@ export default function Home(props: HomeProps) {
             }}
             to={"/projects"}
             id="hero_cta"
-            className="uppercase font-bold text-2xl  text-rose-500"
+            className="uppercase font-bold lg:text-2xl  md:text-xl text-lg text-rose-500"
           >
             projects
           </Link>

@@ -13,7 +13,7 @@ export default function Contact(props: HomeProps) {
       id="contact"
       className="w-full h-full overflow-hidden grid place-items-center"
     >
-      <div id="projects_cards" className="w-2/4 text-center">
+      <div id="contact_card" className="w-2/4 max-md:w-full text-center">
         <h1 className="text-4xl capitalize font-bold">talk to me</h1>
         <p className="text-xl tracking-widest font-light py-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus iste
@@ -34,7 +34,7 @@ export default function Contact(props: HomeProps) {
           }}>Say Hello</motion.a>
       </div>
 
-      <p className="text-sm tracking-widest font-light capitalize">
+      <p className="text-sm tracking-widest font-light capitalize text-center">
         {footer_section.footerMsg}
       </p>
     </section>

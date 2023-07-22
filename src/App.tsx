@@ -25,7 +25,7 @@ export default function App() {
   return (
     <motion.div
       id="codeRoot"
-      className="w-screen h-screen leading-relaxed text-slate-400 antialiased bg-slate selection:bg-teal-300 selection:text-teal-900 overflow-hidden py-10 px-8 bg-slate"
+      className="w-screen h-screen leading-relaxed text-slate-400 antialiased bg-slate selection:bg-teal-300 selection:text-teal-900 overflow-hidden py-10 px-8 "
       animate={{
         background: [
           "linear-gradient(0deg, rgb(15, 23, 42), rgb(2, 6, 23))",

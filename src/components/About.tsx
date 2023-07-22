@@ -17,20 +17,17 @@ export default function About() {
       id="about"
       className="w-full h-full overflow-hidden grid place-items-center"
     >
-      <div id="about_cards" className="w-2/3 h-2/3 flex flex-row">
-        <div
-          id="card_titles"
-          className="w-1/4 border-l-4 border-slate-800 flex flex-col justify-between"
-        >
+      <div id="about_cards" className="w-3/4 h-2/3 max-md:w-10/12 max-md:h-5/6 flex flex-row max-md:flex-col">
+        <div id="card_titles" className="w-1/4 max-md:h-1/6 max-md:w-full border-l-4 max-md:border-b-4  max-md:border-l-0 border-slate-800 flex flex-col max-md:flex-row justify-between">
           <motion.button
             whileTap={{}}
             onClick={() => {
               setCardOpen("one");
             }}
             id="card_1_title"
-            className={`hover:bg-slate-800 transition-colors  w-full h-1/6 capitalize text-cyan-500 font-bold tracking-widest  ${
+            className={`hover:bg-slate-800 transition-colors w-full max-md:w-1/3 h-1/6 max-md:h-full capitalize text-cyan-500 font-bold tracking-widest  ${
               cardOpen === "one"
-                ? "bg-slate-800 border-l-4 border-cyan-500"
+                ? "bg-slate-800 border-l-4 max-md:border-b-4 max-md:border-l-0  border-cyan-500"
                 : ""
             }`}
           >
@@ -42,9 +39,9 @@ export default function About() {
               setCardOpen("two");
             }}
             id="card_2_title"
-            className={`hover:bg-slate-800 transition-colors w-full h-1/6 capitalize text-cyan-500 font-bold tracking-widest  ${
+            className={`hover:bg-slate-800 transition-colors w-full max-md:w-1/3 h-1/6 max-md:h-full capitalize text-cyan-500 font-bold tracking-widest  ${
               cardOpen === "two"
-                ? "bg-slate-800 border-l-4 border-cyan-500"
+                ? "bg-slate-800  border-l-4 max-md:border-b-4 max-md:border-l-0  border-cyan-500"
                 : ""
             }`}
           >
@@ -56,24 +53,23 @@ export default function About() {
               setCardOpen("three");
             }}
             id="card_3_title"
-            className={`hover:bg-slate-800 transition-colors w-full h-1/6 capitalize text-cyan-500 font-bold tracking-widest ${
+            className={`hover:bg-slate-800 transition-colors w-full max-md:w-1/3 h-1/6 max-md:h-full  capitalize text-cyan-500 font-bold tracking-widest ${
               cardOpen === "three"
-                ? "bg-slate-800 border-l-4 border-cyan-500"
+                ? "bg-slate-800 border-l-4 max-md:border-b-4 max-md:border-l-0  border-cyan-500"
                 : ""
             } `}
           >
             what i know
           </motion.button>
         </div>
-        <div id="card_details" className="h-full w-3/4 relative">
-          <motion.div
-            id="card_1_details"
+        <div id="card_details" className="h-full w-3/4 max-md:w-full max-md:h-5/6 relative">
+          <motion.div id="card_1_details"
             animate={cardOpen === "one" ? "open" : "closed"}
             variants={fadeInOut}
             transition={{ duration: 0.8, stiffness: 100 }}
-            className={`w-full h-full z-[2] absolute top-0 left-0 overflow-hidden grid place-items-center px-5`}
+            className={`w-full h-full z-[2] absolute top-0 left-0 overflow-hidden grid place-items-center px-5 max-md:py-5 max-md:px-0`}
           >
-            <div id="card_1_details_card">
+            <div id="card_1_details_card border">
               <h1 className="text-4xl font-bold capitalize">
                 {about_section.whoIam.myName}
               </h1>
@@ -88,8 +84,7 @@ export default function About() {
               </p>
             </div>
           </motion.div>
-          <motion.div
-            id="card_2_details"
+          <motion.div id="card_2_details"
             animate={cardOpen === "two" ? "open" : "closed"}
             variants={fadeInOut}
             transition={{ duration: 0.8, stiffness: 100 }}
@@ -133,7 +128,9 @@ export default function About() {
                         </div>
                       </div>
                       <div>
-                        <h1 className="text-xl font-semibold text-indigo-500">{card.name}</h1>
+                        <h1 className="text-xl font-semibold text-indigo-500">
+                          {card.name}
+                        </h1>
                         <p className="text-sm">{card.details}</p>
                       </div>
                     </div>
@@ -142,8 +139,7 @@ export default function About() {
               })}
             </div>
           </motion.div>
-          <motion.div
-            id="card_3_details"
+          <motion.div id="card_3_details"
             animate={cardOpen === "three" ? "open" : "closed"}
             variants={fadeInOut}
             transition={{ duration: 0.8, stiffness: 100 }}
@@ -160,7 +156,7 @@ export default function About() {
                       key={item.techName}
                       className="text-white text-5xl flex flex-col justify-center items-center"
                       title={item.techName}
-                    > 
+                    >
                       <IconComponent className="text-teal-500" />
                       <p className="text-sm uppercase font-light tracking-widest text-teal-200">
                         {item.techName}

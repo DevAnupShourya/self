@@ -21,7 +21,6 @@ export default function Cursor(props: onLinkProps) {
       mouse2X.set(event.clientX - 25);
       mouse2Y.set(event.clientY - 25);
     };
-    console.log(-(document.body.clientHeight / 2));
 
     document.addEventListener("mousemove", handleMouseMove);
 
@@ -38,7 +37,7 @@ export default function Cursor(props: onLinkProps) {
   const cursorYSpring2 = useSpring(mouse2Y, springConfig2);
 
   return (
-    <>
+    <div className="max-md:hidden">
       <motion.div
         id="cursor1"
         className="w-[10px] h-[10px] z-50 pointer-events-none fixed inset-0 rounded-full bg-cyan-500"
@@ -55,13 +54,11 @@ export default function Cursor(props: onLinkProps) {
       ></motion.div>
       <motion.div
         id="cursor2"
-        // ${props.onLink === true ? "w-[100px] h-[100px] -translate-x-[50px] -translate-y-[50px]" : "w-[50px] h-[50px]"}
         className={`z-50 w-[50px] h-[50px] pointer-events-none fixed inset-0 rounded-full grid place-items-center border-2 border-cyan-700 bg-blend-multiply`}
         animate={{
           opacity: 1,
           width: props.onLink === true ? "100px" : "50px",
           height: props.onLink === true ? "100px" : "50px",
-          // backdropFilter: props.onLink === true ? "blur(5px)" : "blur(0px)",
         }}
         transition={{ delay: 0, duration: 0.6 }}
         style={{
@@ -69,6 +66,6 @@ export default function Cursor(props: onLinkProps) {
           translateY: cursorYSpring2,
         }}
       ></motion.div>
-    </>
+    </div>
   );
 }

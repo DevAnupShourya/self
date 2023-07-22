@@ -15,12 +15,12 @@ export default function Navbar(props: HomeProps) {
 
   return (
     <>
-      <motion.nav className="z-20 fixed top-0 left-0 w-screen h-28 py-4 ">
+      <motion.nav className="z-20 fixed top-0 left-0 w-screen lg:h-28 md:h-28 h-24 py-4 ">
         <div
           id="navbar"
           className="w-5/6 h-full rounded-md mx-auto px-10 py-2 flex justify-between shadow-2xl bg-slate-900"
         >
-          <div id="logo" className="w-1/12 h-full">
+          <div id="logo" className="h-full lg:w-1/12 md:w-1/12 w-1/6">
             <Link to={"/"}>
               <svg
                 className="w-full h-full"
@@ -115,7 +115,7 @@ export default function Navbar(props: HomeProps) {
             <motion.i
               whileHover={{ scale: 1.2 }}
               whileTap={{ scaleY: 0.5 }}
-              className="cursor-pointer text-3xl font-bold text-white"
+              className="cursor-pointer lg:text-3xl md:text-2lg text-lg font-bold text-white"
               onClick={() => {
                 setMenuOpen(!menuOpen);
               }}
@@ -136,11 +136,11 @@ export default function Navbar(props: HomeProps) {
             return (
               // <li key={`${link.link_address}`} className="uppercase text-8xl tracking-widest font-bold links" onClick={() => {setMenuOpen(!menuOpen)}}>
               <motion.li
-                whileHover={{ letterSpacing: "0px", scale : 2 }}
-                transition={{type : 'spring'}}
-                animate={{letterSpacing : '-10px'}}
+                whileHover={{ letterSpacing: "0px", scale: 2 }}
+                transition={{ type: "spring" }}
+                // animate={{letterSpacing : '-10px'}} // works great in desktop only
                 key={`${link.link_address}`}
-                className="uppercase text-8xl text-white font-bold hover:text-emerald-500 transition-colors"
+                className="uppercase text-8xl max-lg:text-8xl max-md:text-6xl max-sm:text-4xl  text-white font-bold hover:text-emerald-500 transition-colors"
                 onClick={() => {
                   setMenuOpen(!menuOpen);
                 }}

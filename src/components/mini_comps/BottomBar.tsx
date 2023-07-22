@@ -8,14 +8,14 @@ import { Link } from "react-router-dom";
 
 export default function BottomBar() {
   return (
-    <motion.div className="z-20 fixed bottom-0 left-0 w-screen h-24 py-4 ">
+    <motion.div className="z-20 fixed bottom-0 left-0 w-screen lg:h-24 md:h-20 h-16 lg:py-4 md:py-2">
       <footer
         id="footer"
         className="w-5/6 h-full mx-auto py-2 flex justify-between"
       >
         <motion.div
           id="socialBar"
-          className="w-2/6 rounded-md bg-slate-900 shadow-2xl"
+          className="lg:w-2/6 md:w-3/6 w-full rounded-md bg-slate-900 shadow-2xl"
         >
           <ul className="w-full h-full flex flex-row justify-around items-center">
             {social_links.map((link) => {
@@ -24,7 +24,7 @@ export default function BottomBar() {
                 <motion.li
                   key={`${link.social_media_name}`}
                   whileHover={{ scale: 1.2 }}
-                  className="text-cyan-500 font-light text-xl"
+                  className="text-cyan-500 font-light lg:text-xl md:text-lg text-lg"
                 >
                   <Link
                     to={link.social_media_link}
@@ -39,7 +39,7 @@ export default function BottomBar() {
         </motion.div>
         <motion.div
           id="statusBar"
-          className="w-1/6 rounded-md bg-slate-900 grid place-items-center text-xs shadow-2xl"
+          className="lg:w-1/6 md:hidden p-2 rounded-md bg-slate-900 lg:grid  hidden place-items-center text-xs shadow-2xl"
         >
           <p>Seeking Job Oportuanities</p>
         </motion.div>
