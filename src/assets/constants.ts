@@ -47,7 +47,7 @@ export const social_links = [
 	},
 	{
 		social_media_name: "twitter",
-		social_media_link: false,
+		social_media_link: '',
 		social_media_icon: TbBrandTwitter as IconType,
 	},
 	{
