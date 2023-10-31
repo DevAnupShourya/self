@@ -131,16 +131,16 @@ export default function Navbar(props: HomeProps) {
           menuOpen ? "grid" : "hidden"
         }  z-10 fixed top-0 left-0 w-screen h-screen py-28 place-items-center backdrop-blur-md`}
       >
-        <ul id="links" className="w-3/6 text-center">
+        <ul id="links" className="w-auto text-center">
           {navbar_links.map((link) => {
             return (
               // <li key={`${link.link_address}`} className="uppercase text-8xl tracking-widest font-bold links" onClick={() => {setMenuOpen(!menuOpen)}}>
               <motion.li
-                whileHover={{ letterSpacing: "0px", scale: 2 }}
+                whileHover={{ letterSpacing: "0px", scale: 1.2 }}
                 transition={{ type: "spring" }}
                 // animate={{letterSpacing : '-10px'}} // works great in desktop only
                 key={`${link.link_address}`}
-                className="uppercase text-8xl max-lg:text-8xl max-md:text-6xl max-sm:text-4xl  text-white font-bold hover:text-emerald-500 transition-colors"
+                className=" uppercase text-6xl max-lg:text-6xl max-md:text-4xl max-sm:text-2xl  text-white font-bold hover:text-emerald-500 transition-colors"
                 onClick={() => {
                   setMenuOpen(!menuOpen);
                 }}

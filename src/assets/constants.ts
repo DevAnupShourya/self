@@ -47,7 +47,7 @@ export const social_links = [
 	},
 	{
 		social_media_name: "twitter",
-		social_media_link: '',
+		social_media_link: 'https://twitter.com/Shourya_Anup',
 		social_media_icon: TbBrandTwitter as IconType,
 	},
 	{
@@ -218,6 +218,14 @@ export const projects_section = [
 		projectGithubLink: "https://github.com/DevAnupShourya/MindScribe",
 		projectLivedemoLink: '',
 		projectImgLink: "./projects/p1.png",
+	},
+	{
+		projectNo: 2,
+		projectName: "Vixel | 🏃🏻‍♂️ ONGOING 🏃🏻‍♂️",
+		projectSummary: "World in Pixels, the ultimate social media platform designed to connect individuals.",
+		projectGithubLink: "https://github.com/DevAnupShourya/vixel",
+		projectLivedemoLink: '',
+		projectImgLink: "./projects/p2.png",
 	},
 ];
 export const footer_section = {

@@ -2,7 +2,9 @@
 import { projects_section } from "../assets/constants";
 // ? packages
 import { motion } from "framer-motion";
-import { VscGithubAlt, VscArrowSwap } from "react-icons/vsc";
+import { VscGithubAlt } from "react-icons/vsc";
+import { HiOutlineExternalLink } from "react-icons/hi";
+import { FiImage } from "react-icons/fi";
 
 export default function Projects() {
   return (
@@ -21,7 +23,7 @@ export default function Projects() {
               transition={{ delay: 0.1 * project.projectNo }}
               whileInView={{ opacity: [0, 1] }}
               id={`project_${project.projectNo}`}
-              className="relative w-full h-1/4 max-md:h-3/5 border-spacing-0  mb-10 rounded-lg overflow-hidden shadow-2xl"
+              className="relative w-full h-2/3 border-spacing-0  mb-10 rounded-lg overflow-hidden shadow-2xl"
             >
               <div
                 id={`project_${project.projectNo}_img`}
@@ -48,12 +50,12 @@ export default function Projects() {
               ></motion.div>
               <div
                 id={`project_${project.projectNo}_details`}
-                className="w-2/4 max-md:w-full max-md:px-4 h-full absolute top-0 left-0 z-[3] py-2 px-5 text-white"
+                className="w-2/4 max-md:w-full max-md:px-4 h-full absolute top-0 left-0 z-[3] py-10 px-5 text-white"
               >
-                <h1 className="text-2xl max-md:text-xl font-bold tracking-widest capitalize ">
+                <h1 className="text-xl max-md:text-xl font-bold tracking-widest capitalize ">
                   {project.projectName}
                 </h1>
-                <p className="text-sm text-gray-500">
+                <p className="text-lg text-gray-500">
                   {project.projectSummary}
                 </p>
                 <div
@@ -61,20 +63,39 @@ export default function Projects() {
                   className=" w-1/3 flex items-center justify-between"
                 >
                   <motion.a
-                    whileHover={{ scale: 1.2 }}
+                    whileHover={{ scale: 1.1 }}
                     className="text-xl p-2 text-pink-500"
                     href={project.projectGithubLink}
                     target="_blank"
+                    title="Github Link"
                   >
                     <VscGithubAlt />
                   </motion.a>
                   <motion.a
-                    whileHover={{ scale: 1.2 }}
+                    whileHover={{ scale: 1.1 }}
+                    className="text-xl p-2 text-pink-500"
+                    href={project.projectImgLink}
+                    target="_blank"
+                    title="Image Link"
+                  >
+                    <FiImage />
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ scale: 1.1 }}
                     className="text-xl p-2 text-pink-500"
                     href={project.projectLivedemoLink}
                     target="_blank"
+                    title="Project Live Demo"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      project.projectLivedemoLink === ""
+                        ? window.alert(
+                            "Not Hosted anywhere yet. Will Upadate Soon"
+                          )
+                        : null;
+                    }}
                   >
-                    <VscArrowSwap />
+                    <HiOutlineExternalLink />
                   </motion.a>
                 </div>
               </div>
