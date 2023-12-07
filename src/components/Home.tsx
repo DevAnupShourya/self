@@ -17,7 +17,7 @@ export default function Home(props: HomeProps) {
       <main id="hero" className="">
         <motion.h1
           id="hero_title"
-          className="stroke-effect uppercase font-bold lg:text-8xl md:text-6xl tracking-widest text-5xl text-white "
+          className="text-transparent bg-clip-text bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-300 via-blue-500 to-purple-600 stroke-effect uppercase font-bold lg:text-8xl md:text-6xl tracking-widest text-5xl text-white "
         >
           hello i'm anup shourya
         </motion.h1>

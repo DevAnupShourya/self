@@ -70,7 +70,7 @@ import { GrReactjs } from "react-icons/gr";
 import { IoLogoNodejs } from "react-icons/io";
 import { SiExpress, SiTailwindcss } from "react-icons/si";
 import { AiOutlineApi } from "react-icons/ai";
-import { BiLogoRedux ,BiLogoHtml5 } from "react-icons/bi";
+import { BiLogoRedux, BiLogoHtml5 } from "react-icons/bi";
 import { FaNetworkWired, FaGitAlt } from "react-icons/fa";
 
 export const about_section = {

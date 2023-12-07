@@ -1,5 +1,5 @@
 // ? Local Files
-import { social_links , footer_section} from "../../assets/constants";
+import { social_links, footer_section } from "../../assets/constants";
 // ? packages
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -36,7 +36,15 @@ export default function BottomBar() {
           id="statusBar"
           className="lg:w-1/6 md:hidden p-2 rounded-md bg-slate-900 lg:grid  hidden place-items-center shadow-2xl"
         >
-          <p className="text-xs">{footer_section.bottomBarMsg}</p>
+          <p className="text-xs">
+            <Link
+              to="https://www.fiverr.com/s/DL7wXX"
+              target="_blank"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 font-bold "
+            >
+              Get to Know on Fiverr
+            </Link>
+          </p>
         </motion.div>
       </footer>
     </motion.div>

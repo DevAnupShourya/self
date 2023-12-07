@@ -14,16 +14,20 @@ export default function Contact(props: HomeProps) {
       className="w-full h-full overflow-hidden grid place-items-center"
     >
       <div id="contact_card" className="w-2/4 max-md:w-full text-center">
-        <h1 className="text-4xl capitalize font-bold">talk to me</h1>
+        <h1 className="text-4xl capitalize font-bold">Contact Me</h1>
         <p className="text-xl tracking-widest font-light py-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus iste
-          pariatur dignissimos architecto, placeat sequi in numquam laudantium?
-          Sequi deserunt ipsa enim facere natus. Molestias.
+          Welcome to the contact hub! I'm thrilled to connect with you. Whether
+          you have inquiries, collaboration proposals, or just want to discuss
+          the latest tech trends, this is the place to reach out.
+          <br />
+          Feel free to drop me a message using the form below, and I'll get back
+          to you as soon as possible. Your feedback, questions, and ideas are
+          highly valued. Let's build something amazing together!
         </p>
         <motion.a
-          href="mailto:"
+          href="mailto:contact.yourwebdev@gmail.com"
           target="_blank"
-          className="text-2xl text-rose-400 uppercase font-bold m-5"
+          className="text-2xl text-transparent bg-clip-text  bg-gradient-to-r from-yellow-200 via-pink-200 to-pink-400 uppercase font-bold m-5"
           whileHover={{ filter: "blur(1px)", scale: 1.2 }}
           transition={{ duration: 0.5, type: "spring" }}
           onMouseEnter={() => {
@@ -33,7 +37,22 @@ export default function Contact(props: HomeProps) {
             props.setOnLink(false);
           }}
         >
-          Say Hello
+         E-Mail
+        </motion.a>
+        <motion.a
+          href="https://www.fiverr.com/yourwebdevanup"
+          target="_blank"
+          className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-purple-400 uppercase font-bold m-5"
+          whileHover={{ filter: "blur(0.5px)", scale: 1.4 }}
+          transition={{ duration: 0.5, type: "spring" }}
+          onMouseEnter={() => {
+            props.setOnLink(true);
+          }}
+          onMouseLeave={() => {
+            props.setOnLink(false);
+          }}
+        >
+         On Fiverr
         </motion.a>
       </div>
 
