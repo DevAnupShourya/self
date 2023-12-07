@@ -228,7 +228,3 @@ export const projects_section = [
 		projectImgLink: "./projects/p2.png",
 	},
 ];
-export const footer_section = {
-	bottomBarMsg: "Open to Exciting Web Apps Developing Opportunities",
-	footerMsg: "Loosely designed in Lunacy and Coded in VS Code by yours truly. Built with ReactJS and Tailwind CSS, deployed with Vercel. All text is set in the Inconsolata typeface."
-};

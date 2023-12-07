@@ -1,5 +1,5 @@
 // ? Local Files
-import { social_links, footer_section } from "../../assets/constants";
+import { social_links } from "../../assets/constants";
 // ? packages
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
