@@ -15,11 +15,6 @@ export const navbar_links = [
 		link_name: "projects",
 		link_address: "/projects"
 	},
-	// ? In Future
-	// {
-	// 	link_name: "blogs",
-	// 	link_address: "/blogs"
-	// },
 	{
 		link_name: "contact",
 		link_address: "/contact"
@@ -36,7 +31,7 @@ import { HiOutlineMail } from "react-icons/hi";
 export const social_links = [
 	{
 		social_media_name: "github",
-		social_media_link: "https://github.com/AnupShouryaDev",
+		social_media_link: "https://github.com/DevAnupShourya",
 		social_media_icon: VscGithubAlt as IconType,
 
 	},
@@ -65,7 +60,7 @@ import { GiHypodermicTest } from 'react-icons/gi';
 import { AiOutlineDeploymentUnit, AiFillSecurityScan } from 'react-icons/ai';
 
 // ? Languages Icons
-import { TbBrandTypescript, TbBrandJavascript, TbBrandCss3, TbBrandMongodb, TbBrandCpp } from "react-icons/tb";
+import { TbBrandTypescript, TbBrandJavascript, TbBrandCss3, TbBrandMongodb, TbBrandNextjs  } from "react-icons/tb";
 import { GrReactjs } from "react-icons/gr";
 import { IoLogoNodejs } from "react-icons/io";
 import { SiExpress, SiTailwindcss } from "react-icons/si";
@@ -132,79 +127,64 @@ export const about_section = {
 		},
 	]
 	,
-	whatIknow: [
+	whatIKnow: [
 		{
-			no: 1,
 			techName: "javascript",
 			techIcon: TbBrandJavascript as IconType
 		},
 		{
-			no: 2,
 			techName: "reactjs",
 			techIcon: GrReactjs as IconType
 		},
 		{
-			no: 3,
 			techName: "TypeScript",
 			techIcon: TbBrandTypescript as IconType
 		},
 		{
-			no: 4,
 			techName: "nodejs",
 			techIcon: IoLogoNodejs as IconType
 		},
 		{
-			no: 5,
 			techName: "mongodb",
 			techIcon: TbBrandMongodb as IconType
 		},
 		{
-			no: 6,
-			techName: "Sass",
-			techIcon: TbBrandSass as IconType
+			techName: "nextjs",
+			techIcon: TbBrandNextjs as IconType
 		},
 		{
-			no: 7,
-			techName: "C++",
-			techIcon: TbBrandCpp as IconType
-		},
-		{
-			no: 8,
 			techName: "html",
 			techIcon: BiLogoHtml5 as IconType
 		},
 		{
-			no: 9,
 			techName: "Css",
 			techIcon: TbBrandCss3 as IconType
 		},
 		{
-			no: 10,
+			techName: "Sass",
+			techIcon: TbBrandSass as IconType
+		},
+		{
 			techName: "express",
 			techIcon: SiExpress as IconType
 		},
 		{
-			no: 11,
 			techName: "Git",
 			techIcon: FaGitAlt as IconType
 		},
 		{
-			no: 12,
 			techName: "tailwindcss",
 			techIcon: SiTailwindcss as IconType
 		},
 		{
-			no: 13,
-			techName: "Redux",
+			techName: "Redux toolkit",
 			techIcon: BiLogoRedux as IconType
 		},
 		{
-			no: 14,
-			techName: "API",
+			techName: "API dev",
 			techIcon: AiOutlineApi as IconType
 		},
 		{
-			no: 15,
 			techName: "System Design",
 			techIcon: FaNetworkWired as IconType
 		},
@@ -212,20 +192,20 @@ export const about_section = {
 };
 export const projects_section = [
 	{
-		projectNo: 1,
+	
+		projectName: "Mynx",
+		projectSummary: "Mynx: World in Pixels, the ultimate social media platform designed to connect individuals through a vibrant and visually captivating experience.",
+		projectGithubLink: "https://github.com/DevAnupShourya/mynx",
+		projectLivedemoLink: 'https://mynx.vercel.app/',
+		projectImgLink: "./projects/p2.png",
+	},
+	{
+	
 		projectName: "MindScribe",
 		projectSummary: "MindScribe is a revolutionary note-taking platform that unlocks the power of your thoughts.",
 		projectGithubLink: "https://github.com/DevAnupShourya/MindScribe",
-		projectLivedemoLink: '',
+		projectLivedemoLink: '/',
 		projectImgLink: "./projects/p1.png",
-	},
-	{
-		projectNo: 2,
-		projectName: "Vixel | 🏃🏻‍♂️ ONGOING 🏃🏻‍♂️",
-		projectSummary: "World in Pixels, the ultimate social media platform designed to connect individuals.",
-		projectGithubLink: "https://github.com/DevAnupShourya/vixel",
-		projectLivedemoLink: '',
-		projectImgLink: "./projects/p2.png",
 	},
 ];
 export const footer_section = {

@@ -1,8 +1,7 @@
-// ? Local Files
-import { about_section } from "../assets/constants";
-// ? packages
 import { useState } from "react";
 import { motion } from "framer-motion";
+
+import { about_section } from "../assets/constants";
 
 const fadeInOut = {
   open: { opacity: [0.2, 0.5, 0.8, 1], zIndex: 2 },
@@ -65,7 +64,7 @@ export default function About() {
                 : ""
             } `}
           >
-            what i know
+            tools i use
           </motion.button>
         </div>
         <div
@@ -159,18 +158,18 @@ export default function About() {
           >
             <div id="card_3_details_card" className="w-full h-full">
               <ul className="w-full h-full grid grid-rows-4 grid-cols-3 place-items-stretch">
-                {about_section.whatIknow.map((item) => {
+                {about_section.whatIKnow.map((item , i) => {
                   const IconComponent = item.techIcon;
                   return (
                     <motion.li
                       animate={{ opacity: [0, 0.5, 1] }}
-                      transition={{ delay: item.no * 0.1, duration: 0.5 }}
+                      transition={{ delay: i * 0.1, duration: 0.5 }}
                       key={item.techName}
                       className="text-white text-5xl flex flex-col justify-center items-center"
                       title={item.techName}
                     >
                       <IconComponent className="text-teal-500" />
-                      <p className="text-sm uppercase font-light tracking-widest text-teal-200">
+                      <p className="text-sm uppercase font-light tracking-widest text-teal-200 text-center">
                         {item.techName}
                       </p>
                     </motion.li>

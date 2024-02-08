@@ -16,17 +16,17 @@ export default function Projects() {
         id="projects_cards"
         className="py-10 w-4/5 h-5/6 overflow-y-scroll max-md:w-full"
       >
-        {projects_section.map((project) => {
+        {projects_section.map((project , i) => {
           return (
             <motion.div
-              key={project.projectNo}
-              transition={{ delay: 0.1 * project.projectNo }}
+              key={i}
+              transition={{ delay: 0.1 * i }}
               whileInView={{ opacity: [0, 1] }}
-              id={`project_${project.projectNo}`}
+              id={`project_${i}`}
               className="relative w-full h-2/3 border-spacing-0  mb-10 rounded-lg overflow-hidden shadow-2xl"
             >
               <div
-                id={`project_${project.projectNo}_img`}
+                id={`project_${i}_img`}
                 className="w-full h-full absolute top-0 left-0 z-[1]"
               >
                 <motion.img
@@ -36,7 +36,7 @@ export default function Projects() {
                 />
               </div>
               <motion.div
-                id={`project_${project.projectNo}_gredient_div`}
+                id={`project_${i}_gredient_div`}
                 className="w-full h-full absolute top-0 left-0 z-[2]"
                 animate={{
                   background:
@@ -49,7 +49,7 @@ export default function Projects() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               ></motion.div>
               <div
-                id={`project_${project.projectNo}_details`}
+                id={`project_${i}_details`}
                 className="w-2/4 max-md:w-full max-md:px-4 h-full absolute top-0 left-0 z-[3] py-10 px-5 text-white"
               >
                 <h1 className="text-xl max-md:text-xl font-bold tracking-widest capitalize ">
@@ -59,7 +59,7 @@ export default function Projects() {
                   {project.projectSummary}
                 </p>
                 <div
-                  id={`project_${project.projectNo}_links`}
+                  id={`project_${i}_links`}
                   className=" w-1/3 flex items-center justify-between"
                 >
                   <motion.a
@@ -86,14 +86,6 @@ export default function Projects() {
                     href={project.projectLivedemoLink}
                     target="_blank"
                     title="Project Live Demo"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      project.projectLivedemoLink === ""
-                        ? window.alert(
-                            "Not Hosted anywhere yet. Will Upadate Soon"
-                          )
-                        : null;
-                    }}
                   >
                     <HiOutlineExternalLink />
                   </motion.a>
